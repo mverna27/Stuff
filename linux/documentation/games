@@ -1,0 +1,42 @@
+-> osu!
+https://wiki.archlinux.org/title/User:Katoumegumi
+https://blog.thepoon.fr/osuLinuxAudioLatency/
+sudo pacman -S libwacom x86-input-wacom lib32-libxcomposite kcm-wacomtablet --needed
+discord right presence: https://github.com/HorizonCode/linux-lutris-osu-rpc
+lutris: set ALSA audio driver
+lutris: select latest lutris-GE
+lutris: deselect use discrete graphics
+/mnt/games/osu\!/osu\!.marco.cfg change "Display" to display that should be used for fullscreen
+launch with vblank_mode=0
+USE WINE-OSU FROM THEPOON DISCORD SERVER
+
+-> lol
+sudo pacman -S zenity openssl --needed
+https://www.reddit.com/r/leagueoflinux/comments/fl9mri/installing_and_optimizing_league_of_legends_on/
+install via lutris
+make PersistentSettings.json read-only
+
+-> overwatch
+https://github.com/lutris/docs/blob/master/Battle.Net.md
+no not enable automati login in battle.net launcher! (this causes the launcher to not launch for me
+do not enable fsync that causes it to crash for me
+To easily compile shaders: Play > Game Browser > Search for "tiny ow". Right click a game and choose spectate. Press F1-F12 to observe a player.
+launch with vblank_mode=0
+
+-> cyberpunk2077
+WINE_FULLSCREEN_FSR=1 WINE_FULLSCREEN_FSR_STRENGTH=2 /home/marco/scripts/games/cp2077/pre.sh ; gamemoderun mangohud %command% --launcher-skip ; /home/marco/scripts/display/reset.sh
+
+-> csgo
+https://wiki.archlinux.org/index.php/Steam/Game-specific_troubleshooting
+after each alt-tab: wmctrl -r "Counter-Strike: Global Offensive - OpenGL" -e 0,3440,0,1440,2560
+launch options: vblank_mode=0 %command% -nojoy
+launch with vblank_mode=0
+
+-> nier automata
+/home/marco/scripts/games/nier/pre.sh ; gamemoderun mangohud %command% ; /home/marco/scripts/display/reset.sh
+
+-> dark souls
+ultrawide support: https://www.youtube.com/watch?v=1jP28z9H3Mg
+
+-> bioshock
+/home/marco/scripts/games/bioshock/pre.sh ; gamemoderun strangle 96 %command% ; /home/marco/scripts/display/reset.sh
